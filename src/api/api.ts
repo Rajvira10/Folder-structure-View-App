@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Folder } from "../types/Folder";
 
-const baseURL = "http://localhost:3001/api/folders/"; // Replace with your API endpoint
+const baseURL = import.meta.env.BASEURL || "http://localhost:3001/api/folders/"; // Replace with your API endpoint
 
 // Fetch the folder structure
 export const getFolderStructure = async (): Promise<Folder[]> => {
